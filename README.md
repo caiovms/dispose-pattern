@@ -19,7 +19,9 @@ You need to follow the steps below:
 
 2. Create a flag that will control whether the resource has already been released or not (bool disposed);
 
-3. Create a Dispose method by receiving a boolean disposing which, depending on the value (if it is true will release the managed resources and, if false, the unmanaged resources). This method must be protected virtual because of the inheritance hierarchy. If you want, define derived classes that will need to release unmanaged resources after its use, in the subclass it must be overwritten. It is signed with protected to limit its visibility by other classes outside the hierarchy. Note: the base class (if any) must not have any finalizer.
+3. Create a Dispose method by receiving a boolean disposing which, depending on the value (if it is true will release the managed resources and, if false, the unmanaged resources). This method must be protected virtual because of the inheritance hierarchy. If you want, define derived classes that will need to release unmanaged resources after its use, in the subclass it must be overwritten. It is signed with protected to limit its visibility by other classes outside the hierarchy. 
+
+   **Note:** the base class (if any) must not have any finalizer.
 
 4. Create a Dispose method without a parameter, as it will call the Dispose (true) method which, in fact, will perform the operations of releasing managed resources and will also make a call to the Garbage Collector's SuppressFinalize method, preventing it from calling the finalizer for that object. .
 
