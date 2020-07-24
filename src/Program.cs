@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            using (DisposePattern pattern = new DisposePattern())
+            using (BaseClass baseClass = new BaseClass())
             {
                 CreateFile createFile = new CreateFile();
 
