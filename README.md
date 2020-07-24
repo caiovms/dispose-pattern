@@ -63,3 +63,9 @@ class DisposePattern : IDisposable
 # Using
 
 Using makes an implicit call to the Dispose method at the end of its scope. It is necessary for the class using Using to implement the IDisposable interface. It is recommended because it is a language resource, requiring no manual cleaning. The compiler automatically generates the try-finally blocks and the resource is instantiated within the Using statement.
+
+
+# References
+
+- https://msdn.microsoft.com/pt-br/library/system.idisposable(v=vs.110).aspx?cs-save-lang=1&cs-lang=csharp#code-snippet-1
+- http://www.linhadecodigo.com.br/artigo/3693/liberacao-de-recursos-usando-o-dispose-pattern.aspx
